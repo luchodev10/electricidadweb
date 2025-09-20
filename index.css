@@ -8,7 +8,7 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     line-height: 1;
     color: #1f2937;
-    background-color: #ffffff;
+    background-color: #EBEBEB;
 }
 
 .container {
@@ -22,7 +22,7 @@ body {
 }
 
 .header {
-    background: linear-gradient(135deg, #0050CF, #002561);
+    background: linear-gradient(135deg, #4F4F4F, #303030);
     color: white;
     padding: 1rem 0;
     position: fixed;
@@ -212,7 +212,7 @@ body {
 /* Services Section */
 .services {
     padding: 4rem 0;
-    background-color: #f9fafb;
+    background-color: #EBEBEB;
 }
 
 .section-title {
@@ -335,7 +335,7 @@ body {
 /* Contact Section */
 .contact {
     padding: 4rem 0;
-    background-color: #f9fafb;
+    background-color: #EBEBEB;
 }
 
 .contact-card {
