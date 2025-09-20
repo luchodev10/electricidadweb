@@ -142,7 +142,7 @@ body {
 }
 
 .hero {
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('fondo.jpg');
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/fondo.jpeg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
