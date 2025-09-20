@@ -142,7 +142,7 @@ body {
 }
 
 .hero {
-    background: url('fondo.jpeg');
+    background: url('assets/fondo.jpeg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
