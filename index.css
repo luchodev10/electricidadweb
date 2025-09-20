@@ -145,7 +145,7 @@ body {
 .hero {
     background: linear-gradient(135deg, #0050CF, #002561);
     color: white;
-    padding: 5rem 0;
+    padding: 3rem 0;
     animation: fadeIn 0.8s ease-out;
 }
 
