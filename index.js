@@ -118,7 +118,7 @@ const observer = new IntersectionObserver((entries, observer) => {
             observer.unobserve(entry.target);
         }
     });
-}, { threshold: 0.2 }); // 0.2 = cuando el 20% sea visible
+}, { threshold: 0.1 }); // 0.2 = cuando el 20% sea visible
 
 reveals.forEach(reveal => {
     observer.observe(reveal);
