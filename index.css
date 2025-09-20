@@ -141,12 +141,15 @@ body {
     padding-bottom: 4rem;
 }
 
-/* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #0050CF, #002561);
+    background: url('fondo.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     color: white;
     padding: 3rem 0;
     animation: fadeIn 0.8s ease-out;
+    position: relative;
 }
 
 .hero-title {
@@ -158,7 +161,7 @@ body {
 
 .hero-subtitle {
     font-size: 1.25rem;
-    margin-bottom: 2rem;
+    margin-bottom: 0.5rem;
     animation: fadeIn 0.8s ease-out 0.2s both;
 }
 
@@ -451,7 +454,7 @@ body {
         transform: scale(1);
     }
     50% {
-        transform: scale(1.05);
+        transform: scale(1.1);
     }
 }
 
