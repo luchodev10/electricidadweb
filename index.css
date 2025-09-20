@@ -22,7 +22,7 @@ body {
 }
 
 .header {
-    background: linear-gradient(135deg, #4F4F4F, #303030);
+    background: linear-gradient(135deg, #002157, #000E26);
     color: white;
     padding: 1rem 0;
     position: fixed;
@@ -426,7 +426,7 @@ body {
 }
 
 .footer {
-    background: linear-gradient(135deg, #0050CF, #002561);
+    background: linear-gradient(135deg, #002157, #000E26);
     color: white;
     padding: 2rem 0;
 }
@@ -436,6 +436,18 @@ body {
     margin-top: 0.5rem;
     opacity: 0.8;
 }
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 2s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 
 @keyframes fadeIn {
     from {

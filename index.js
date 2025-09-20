@@ -106,3 +106,20 @@ window.addEventListener('scroll', () => {
         });
     }
 });
+
+// Animaciones al hacer scroll con IntersectionObserver
+const reveals = document.querySelectorAll('.reveal');
+
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            // Si quieres que solo se animen una vez:
+            observer.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.2 }); // 0.2 = cuando el 20% sea visible
+
+reveals.forEach(reveal => {
+    observer.observe(reveal);
+});
