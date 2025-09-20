@@ -1,7 +1,7 @@
 // Set current year
 document.getElementById('current-year').textContent = new Date().getFullYear();
 
-// Navigation functionality
+// Navigation functionality for desktop
 const navBtns = document.querySelectorAll('.nav-btn');
 navBtns.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -14,6 +14,49 @@ navBtns.forEach(btn => {
         const sectionId = btn.getAttribute('data-tab');
         scrollToSection(sectionId);
     });
+});
+
+// Mobile menu functionality
+const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+const mobileNav = document.getElementById('mobile-nav');
+const mobileNavBtns = document.querySelectorAll('.mobile-nav-btn');
+
+mobileMenuToggle.addEventListener('click', () => {
+    mobileNav.classList.toggle('show');
+});
+
+// Navigation functionality for mobile
+mobileNavBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        // Remove active class from all mobile buttons
+        mobileNavBtns.forEach(b => b.classList.remove('active'));
+        // Remove active class from all desktop buttons
+        navBtns.forEach(b => b.classList.remove('active'));
+        
+        // Add active class to clicked button
+        btn.classList.add('active');
+        
+        // Find corresponding desktop button and make it active too
+        const sectionId = btn.getAttribute('data-tab');
+        navBtns.forEach(b => {
+            if (b.getAttribute('data-tab') === sectionId) {
+                b.classList.add('active');
+            }
+        });
+        
+        // Hide mobile menu
+        mobileNav.classList.remove('show');
+        
+        // Scroll to section
+        scrollToSection(sectionId);
+    });
+});
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (!e.target.closest('.mobile-menu')) {
+        mobileNav.classList.remove('show');
+    }
 });
 
 // Scroll to section function
@@ -46,7 +89,16 @@ window.addEventListener('scroll', () => {
     });
     
     if (current) {
+        // Update desktop navigation
         navBtns.forEach(btn => {
+            btn.classList.remove('active');
+            if (btn.getAttribute('data-tab') === current) {
+                btn.classList.add('active');
+            }
+        });
+        
+        // Update mobile navigation
+        mobileNavBtns.forEach(btn => {
             btn.classList.remove('active');
             if (btn.getAttribute('data-tab') === current) {
                 btn.classList.add('active');
